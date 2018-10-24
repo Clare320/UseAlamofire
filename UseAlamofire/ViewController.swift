@@ -17,6 +17,9 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        NetManager.default.header["salePlatformId"] = "60CBE5FE-71A7-4660-9BEC-1422227D6ADB"
+        
         // Do any additional setup after loading the view, typically from a nib.
         
 //        test()
@@ -213,7 +216,10 @@ class ViewController: UIViewController {
 
         // ?type=1&versionNo=2.0.1
         
-        let url = "https://api.baishop.com/api/Home/GetNewHomePage?type=1&versionNo=2.0.1"
+//        let url = "https://api.baishop.com/api/Home/GetNewHomePage?type=1&versionNo=2.0.1"
+//        let url = "Home/GetNewHomePage?type=1&versionNo=2.0.1"
+
+        let url = "Account/GetFavoriteList?pageSize=10&pageIndex=1"
         
         //  parameters: parameters, encoding: URLEncoding(destination: .queryString)
         
@@ -221,14 +227,37 @@ class ViewController: UIViewController {
 //            print(response)
 //        }
         
-        let header: HTTPHeaders = [
-            "salePlatformId": "60CBE5FE-71A7-4660-9BEC-1422227D6ADB"
-        ]
+//        let header: HTTPHeaders = [
+//            "salePlatformId": "60CBE5FE-71A7-4660-9BEC-1422227D6ADB"
+//        ]
         
-        Alamofire.SessionManager.default.request(url, method: .post, headers:header).responseJSON { (response) in
+//        Alamofire.SessionManager.default.request(url, method: .post, headers:header).responseJSON { (response) in
+//            print(response)
+//        }
+        
+        NetManager.default.header["salePlatformId"] = "60CBE5FE-71A7-4660-9BEC-1422227D6ADB"
+        
+        // -- 请求错误回调集中处理？
+        
+        NetManager.default.request(url, method: .post).responseJSON { (response) in
             print(response)
         }
         
+    }
+    
+    @IBAction func handleLoginAndLogout(_ sender: UISegmentedControl) {
+        
+        var token = ""
+        
+        if sender.selectedSegmentIndex == 0 {
+            token = "dce16d2d0e374585982abfd3038c65e7"
+        }
+        
+        NetManager.default.header["token"] = token
+    }
+    
+    @IBAction func request(_ sender: Any) {
+        testCustomConfiguation()
     }
     
 }

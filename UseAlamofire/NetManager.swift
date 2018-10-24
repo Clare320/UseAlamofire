@@ -12,18 +12,25 @@ import Alamofire
 
 class NetManager: NSObject {
 
-    
     public static let `default`: NetManager = {
        return NetManager()
     }()
 
-    var baseURL: String?
+    var baseURL: String {
+        return "https://api.baishop.com/api/"
+    }
     
-    var header: HTTPHeaders?
+    var header: HTTPHeaders = [:]
     
     
-    
-    
-//    func request(url:)
+    public func request(
+        _ url: String,
+        method: HTTPMethod = .get,
+        parameters: Parameters? = nil,
+        encoding: ParameterEncoding = URLEncoding.default)
+        -> DataRequest {
+            let tmpUrl = self.baseURL + url
+            return Alamofire.request(tmpUrl, method: method, parameters: parameters, encoding: encoding, headers: self.header)
+    }
     
 }
