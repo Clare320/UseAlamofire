@@ -7,4 +7,6 @@ target 'UseAlamofire' do
 
   # Pods for UseAlamofire
   pod 'Alamofire'
+  pod 'RxSwift'
+  pod 'RxCocoa'
 end

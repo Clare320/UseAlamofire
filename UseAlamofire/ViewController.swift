@@ -239,10 +239,26 @@ class ViewController: UIViewController {
         
         // -- 请求错误回调集中处理？
         
-        NetManager.default.request(url, method: .post).responseJSON { (response) in
-            print(response)
-        }
         
+        
+        NetManager.default.request(url, method: .post).responseJSON { (response) in
+            if response.result.isSuccess {
+                guard let json = response.result.value else {
+                    print("response is null value")
+                    return
+                }
+                print(json)
+            } else {
+                print(response.result.error!.localizedDescription)
+                guard let error = response.error as? AFError else {
+                    return
+                }
+                print("AFError: \(error)")
+                
+                // -- 获取http状态码 --
+                print("HTTPStatusCode: \(String(describing: response.response?.statusCode))")
+            }
+        }
     }
     
     @IBAction func handleLoginAndLogout(_ sender: UISegmentedControl) {
@@ -255,6 +271,23 @@ class ViewController: UIViewController {
         
         NetManager.default.header["token"] = token
     }
+    
+    
+    @IBAction func changeEnvironment(_ sender: UISegmentedControl) {
+        let manager = NetManager.default
+        
+        switch sender.selectedSegmentIndex {
+        case 0:
+            manager.environment = .release
+        case 1:
+            manager.environment = .preRelease
+        case 2:
+            manager.environment = .debug
+        default:
+            print("out of available range")
+        }
+    }
+    
     
     @IBAction func request(_ sender: Any) {
         testCustomConfiguation()

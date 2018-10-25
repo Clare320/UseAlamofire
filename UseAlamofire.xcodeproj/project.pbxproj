@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		280CCE125E8A73F53B24F2B1 /* Pods_UseAlamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C948C0BD2D8947E8053E95EA /* Pods_UseAlamofire.framework */; };
+		844160C921818412001CB3C8 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844160C821818412001CB3C8 /* FirstViewController.swift */; };
 		8463922D2179B9530007FC2C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8463922C2179B9530007FC2C /* AppDelegate.swift */; };
 		8463922F2179B9530007FC2C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8463922E2179B9530007FC2C /* ViewController.swift */; };
 		846392322179B9530007FC2C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 846392302179B9530007FC2C /* Main.storyboard */; };
@@ -17,6 +18,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		844160C821818412001CB3C8 /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
 		846392292179B9530007FC2C /* UseAlamofire.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UseAlamofire.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8463922C2179B9530007FC2C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8463922E2179B9530007FC2C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -73,6 +75,7 @@
 			children = (
 				8463922C2179B9530007FC2C /* AppDelegate.swift */,
 				8463922E2179B9530007FC2C /* ViewController.swift */,
+				844160C821818412001CB3C8 /* FirstViewController.swift */,
 				8463923E2179D6E90007FC2C /* NetManager.swift */,
 				846392302179B9530007FC2C /* Main.storyboard */,
 				846392332179B9540007FC2C /* Assets.xcassets */,
@@ -186,10 +189,14 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-UseAlamofire/Pods-UseAlamofire-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
+				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -206,6 +213,7 @@
 				8463922F2179B9530007FC2C /* ViewController.swift in Sources */,
 				8463923F2179D6E90007FC2C /* NetManager.swift in Sources */,
 				8463922D2179B9530007FC2C /* AppDelegate.swift in Sources */,
+				844160C921818412001CB3C8 /* FirstViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

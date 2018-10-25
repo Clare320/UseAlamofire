@@ -16,6 +16,20 @@ class NetManager: NSObject {
        return NetManager()
     }()
 
+    
+    enum ServerEnvironment {
+        case release
+        case preRelease
+        case debug
+    }
+    
+    var environment: ServerEnvironment = .release {
+        didSet {
+            print(environment)
+            
+        }
+    }
+    
     var baseURL: String {
         return "https://api.baishop.com/api/"
     }
