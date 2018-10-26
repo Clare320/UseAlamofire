@@ -84,22 +84,60 @@
                                 <rect key="frame" x="12" y="76" width="57" height="30"/>
                                 <state key="normal" title="Print123"/>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kUt-bo-ZU3">
+                                <rect key="frame" x="87" y="76" width="92" height="30"/>
+                                <state key="normal" title="创建新的订阅"/>
+                                <connections>
+                                    <action selector="createNewDisposeBag:" destination="Soi-zm-Zsk" eventType="touchUpInside" id="aw9-md-vik"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jv5-nh-4D5">
+                                <rect key="frame" x="12" y="114" width="92" height="30"/>
+                                <state key="normal" title="测试takeUntil"/>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="kUt-bo-ZU3" firstAttribute="centerY" secondItem="Vjx-L9-eCe" secondAttribute="centerY" id="3Fq-k2-C8a"/>
                             <constraint firstItem="Vjx-L9-eCe" firstAttribute="leading" secondItem="U2U-2O-Hfa" secondAttribute="leading" constant="12" id="7vU-Q3-ZKA"/>
+                            <constraint firstItem="kUt-bo-ZU3" firstAttribute="leading" secondItem="Vjx-L9-eCe" secondAttribute="trailing" constant="18" id="EJO-vn-A7k"/>
+                            <constraint firstItem="Jv5-nh-4D5" firstAttribute="top" secondItem="Vjx-L9-eCe" secondAttribute="bottom" constant="8" id="FLk-7l-mJO"/>
                             <constraint firstItem="Vjx-L9-eCe" firstAttribute="top" secondItem="U2U-2O-Hfa" secondAttribute="top" constant="12" id="Utk-bi-vDl"/>
+                            <constraint firstItem="Jv5-nh-4D5" firstAttribute="leading" secondItem="U2U-2O-Hfa" secondAttribute="leading" constant="12" id="Zqq-As-ty3"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="U2U-2O-Hfa"/>
                     </view>
-                    <navigationItem key="navigationItem" title="RxSwift" id="AmM-LM-EBt"/>
+                    <navigationItem key="navigationItem" title="RxSwift" id="AmM-LM-EBt">
+                        <barButtonItem key="rightBarButtonItem" title="Next" id="Peb-I7-enB">
+                            <connections>
+                                <segue destination="g59-c9-rK0" kind="show" id="M3F-Ey-MDq"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="print123Btn" destination="Vjx-L9-eCe" id="vgM-cR-4NP"/>
+                        <outlet property="takeUntilBtn" destination="Jv5-nh-4D5" id="kMJ-Vx-iWX"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sGy-xO-pGE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="978" y="-280"/>
+            <point key="canvasLocation" x="945" y="-280"/>
+        </scene>
+        <!--Sample-->
+        <scene sceneID="Hn6-ST-aOq">
+            <objects>
+                <viewController id="g59-c9-rK0" customClass="SecondViewController" customModule="UseAlamofire" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ods-0d-r0L">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="hh5-8i-grV"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Sample" id="cDl-K4-K8T"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="csf-d7-HRV" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1735" y="-280"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="vdF-dd-KbM">
