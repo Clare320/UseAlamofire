@@ -123,17 +123,43 @@
             </objects>
             <point key="canvasLocation" x="945" y="-280"/>
         </scene>
-        <!--Sample-->
+        <!--Sample2-->
         <scene sceneID="Hn6-ST-aOq">
             <objects>
                 <viewController id="g59-c9-rK0" customClass="SecondViewController" customModule="UseAlamofire" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ods-0d-r0L">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="d5Z-em-vPJ">
+                                <rect key="frame" x="12" y="76" width="351" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0lR-85-Bxb">
+                                <rect key="frame" x="12" y="126" width="351" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="hh5-8i-grV" firstAttribute="trailing" secondItem="d5Z-em-vPJ" secondAttribute="trailing" constant="12" id="2bT-ce-aDu"/>
+                            <constraint firstItem="d5Z-em-vPJ" firstAttribute="leading" secondItem="hh5-8i-grV" secondAttribute="leading" constant="12" id="IWm-Ph-cPH"/>
+                            <constraint firstItem="d5Z-em-vPJ" firstAttribute="top" secondItem="hh5-8i-grV" secondAttribute="top" constant="12" id="Id5-qU-Kgp"/>
+                            <constraint firstItem="0lR-85-Bxb" firstAttribute="top" secondItem="d5Z-em-vPJ" secondAttribute="bottom" constant="20" id="NuT-ZJ-0ZN"/>
+                            <constraint firstItem="0lR-85-Bxb" firstAttribute="leading" secondItem="hh5-8i-grV" secondAttribute="leading" constant="12" id="Zyc-UM-QJm"/>
+                            <constraint firstItem="hh5-8i-grV" firstAttribute="trailing" secondItem="0lR-85-Bxb" secondAttribute="trailing" constant="12" id="siW-4X-zlY"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="hh5-8i-grV"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Sample" id="cDl-K4-K8T"/>
+                    <navigationItem key="navigationItem" title="Sample2" id="cDl-K4-K8T"/>
+                    <connections>
+                        <outlet property="primeTextField" destination="d5Z-em-vPJ" id="DRM-Pb-LPX"/>
+                        <outlet property="resultLabel" destination="0lR-85-Bxb" id="V47-dc-nAx"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="csf-d7-HRV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
