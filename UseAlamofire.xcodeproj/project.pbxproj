@@ -10,6 +10,7 @@
 		280CCE125E8A73F53B24F2B1 /* Pods_UseAlamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C948C0BD2D8947E8053E95EA /* Pods_UseAlamofire.framework */; };
 		844160C921818412001CB3C8 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844160C821818412001CB3C8 /* FirstViewController.swift */; };
 		844160CD2182F7DF001CB3C8 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844160CC2182F7DF001CB3C8 /* SecondViewController.swift */; };
+		844160F721885CFF001CB3C8 /* ConceptViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844160F621885CFD001CB3C8 /* ConceptViewController.swift */; };
 		8463922D2179B9530007FC2C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8463922C2179B9530007FC2C /* AppDelegate.swift */; };
 		8463922F2179B9530007FC2C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8463922E2179B9530007FC2C /* ViewController.swift */; };
 		846392322179B9530007FC2C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 846392302179B9530007FC2C /* Main.storyboard */; };
@@ -21,6 +22,7 @@
 /* Begin PBXFileReference section */
 		844160C821818412001CB3C8 /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
 		844160CC2182F7DF001CB3C8 /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
+		844160F621885CFD001CB3C8 /* ConceptViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConceptViewController.swift; sourceTree = "<group>"; };
 		846392292179B9530007FC2C /* UseAlamofire.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UseAlamofire.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8463922C2179B9530007FC2C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8463922E2179B9530007FC2C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -79,6 +81,7 @@
 				8463922E2179B9530007FC2C /* ViewController.swift */,
 				844160C821818412001CB3C8 /* FirstViewController.swift */,
 				844160CC2182F7DF001CB3C8 /* SecondViewController.swift */,
+				844160F621885CFD001CB3C8 /* ConceptViewController.swift */,
 				8463923E2179D6E90007FC2C /* NetManager.swift */,
 				846392302179B9530007FC2C /* Main.storyboard */,
 				846392332179B9540007FC2C /* Assets.xcassets */,
@@ -216,6 +219,7 @@
 				8463922F2179B9530007FC2C /* ViewController.swift in Sources */,
 				8463923F2179D6E90007FC2C /* NetManager.swift in Sources */,
 				8463922D2179B9530007FC2C /* AppDelegate.swift in Sources */,
+				844160F721885CFF001CB3C8 /* ConceptViewController.swift in Sources */,
 				844160CD2182F7DF001CB3C8 /* SecondViewController.swift in Sources */,
 				844160C921818412001CB3C8 /* FirstViewController.swift in Sources */,
 			);
