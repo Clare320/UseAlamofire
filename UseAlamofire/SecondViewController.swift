@@ -45,7 +45,7 @@ class SecondViewController: UIViewController {
         testUIBinding()
         
     }
-
+    
     func testReactiveValues() -> Void {
         let a = BehaviorRelay(value: 1)
         let b = BehaviorRelay(value: 2)
