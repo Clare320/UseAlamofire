@@ -172,8 +172,6 @@ class OperatorViewController: UIViewController {
         // scan --> 将前一个元素按闭包处理后的结果当成后一个元素处理的参数 类似于Array中reduce
         
         
-        
-        
         subject1.onNext("Github")
         subject2.onNext("Swift")
         subject1.onNext("juejin")
